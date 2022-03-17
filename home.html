@@ -1,514 +1,576 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1" />
     <link rel="shortcut icon" href="assets/images/logo.ico" type="image/x-icon" />
     <title>Sacolão Barreto</title>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" type = "text/css" href="assets/css/style.css"/>
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css" />
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 </head>
+
 <body>
     <header>
-        <div class="header" >
+        <div class="header">
             <div class="logo">
-                <img class ="logoimg"src="assets/images/logo.png" alt="logo">
+                <img class="logoimg" src="assets/images/logo.png" alt="logo">
             </div>
             <div class="menu">
-                <img  onclick="abrirmenu()" class="menu-opener" src="assets/images/menu.png"/>
-                <nav id = "menu" >
+                <img onclick="abrirmenu()" class="menu-opener" src="assets/images/menu.png" />
+                <nav id="menu">
                     <ul>
-                        <li class ="active" onclick = "hiddenmenu()" ><a href="">Inicio</a></li>
-                        <li><a href="#sobre" onclick = "hiddenmenu()" >Sobre</a></li>
-                        <li><a href="#servicos" onclick = "hiddenmenu()" >Serviços</a></li>
-                        <li><a href="#produtos" onclick = "hiddenmenu()" >Nossos Produtos</a></li>
-                        <li><a href="#clientes" onclick = "hiddenmenu()" >Clientes Satisfeitos</a></li>
-                        <li><a href="#localizacao" onclick = "hiddenmenu()" >Localizações</a></li>
-                        <li><a href="#contato" onclick = "hiddenmenu()" >Nosso Contato</a></li>
+                        <li class="active" onclick="hiddenmenu()"><a href="">Inicio</a></li>
+                        <li><a href="#sobre" onclick="hiddenmenu()">Sobre</a></li>
+                        <li><a href="#servicos" onclick="hiddenmenu()">Serviços</a></li>
+                        <li><a href="#produtos" onclick="hiddenmenu()">Nossos Produtos</a></li>
+                        <li><a href="#clientes" onclick="hiddenmenu()">Clientes Satisfeitos</a></li>
+                        <li><a href="#localizacao" onclick="hiddenmenu()">Localizações</a></li>
+                        <li><a href="#contato" onclick="hiddenmenu()">Nosso Contato</a></li>
                     </ul>
-                </nav>         
+                </nav>
             </div>
         </div>
     </header>
-<script type = "text/javascript">
-    function abrirmenu(){
-        let menu = document.getElementById("menu")
-        menu.style.display = menu.style.display == "" ? "block" : ""
-    }
-    function hiddenmenu(){
-        let menu = document.getElementById("menu1")
-        if(menu.style.display == "block") {
-            menu.style.display = "none"
-        }
-    }
-</script>
-<main>
-    <section class ="banner" onclick = "hiddenmenu()">
-        <div class="sliders1" id = "slidersid" style="margin-left:0vw;">
-            <div class="slide">
-               <div class="slidearea">
-                   <h1 style="text-align: center;">Sacolão Barreto<br><span>Engenho novo</span></h1>               
-                   <h2>Ligue para: (11) 4168-5529</h2>
-                   <a href="tel:41685529" class="button">Ligue agora</a>
-               </div>
-            </div><div class="slide">
-                <div class="slidearea">
-                   <h1 style="text-align: center;">Sacolão Barreto II<br><span>Parque dos Camargos</span></h1>               
-                   <h2>Ligue para: (11) 973642167</h2>
-                   <a href="tel:11973642167" class="button">Ligue agora</a>
-            </div>
-         </div><div class="slide">
-             <div class="slidearea">
-             <h1 style="text-align: center;">Sacolão Barreto III<br><span>Fazendinha</span></h1>               
-                   <h2>Ligue para: (NUMERO)</h2>
-                   <a href="tel:114381-1691" class="button">Ligue agora</a>
-                  </div>
-             </div><div class="slide">
-                 <div class="slidearea">
-                     <h1 style="text-align: center;">Sacolão Barreto IV<br><span>Cruz preta</span></h1>               
-                     <h2>Ligue para: (11) 4161-9826</h2>
-                     <a href="tel:114161-9826" class="button">Ligue agora</a>
-                 </div>
-              </div><div class="slide">
-                 <div class="slidearea">
-                     <h1 style="text-align: center;">Sacolão Barreto V<br><span>Jardim Silveira, Barueri</span></h1>               
-                     <h2>Ligue para: (11) 97507-4149</h2>
-                     <a href="tel:11975074149" class="button">Ligue agora</a>
-                 </div>
-              </div>
-        </div>
-        <div class="sliders1-pointers">
-            <div onclick="funcaoMudarbanner(id)" id ="banner1" class="pointer1 active"></div>
-            <div onclick="funcaoMudarbanner(id)" id ="banner2" class="pointer1"></div>
-            <div onclick="funcaoMudarbanner(id)" id ="banner3" class="pointer1"></div>
-            <div onclick="funcaoMudarbanner(id)" id ="banner4" class="pointer1"></div>
-            <div onclick="funcaoMudarbanner(id)" id ="banner5" class="pointer1"></div>           
-        </div>
-     </section>
-
-    <a name = "sobre"></a>
-    <section class ="default light" >
-        <div class="section-title" data-aos = "fade-up">Sobre nós </div>
-        <div class="section-desc" data-aos = "fade-up">Quem somos nós</div>
-        <div class="section-body" data-aos = "fade-up">
-            <div class="section-aboutus">
-            <div class="section-aboutus--left">
-                A dor em si é o amor, o principal sistema de armazenamento.
-                Agora as setas são ótimas da lição de casa dos clientes. Até que valha a pena como torturador imune à bebida.
-                Até as flechas ou a probabilidade, os membros temem mas, a elite dos desenhos animados.
-                E as crianças começam a ver como termina. Para quem é um desenho animado, um ativo com um diâmetro de proteína, um sistema imunológico.
-                A doença das flechas da terra apenas Vestibulum tincidunt em sem ac elementum. Talvez isso seja uma maquiagem, mas triste.  
-              <a href="" class="button">Ler mais</a>
-              
-                   
-            </div>
-            <div class="section-aboutus--right">
-                <img src="assets/images/bg_team.jpg" alt="">
-            </div>
-        </div>
-
-    </div>              
-            
-        
     <script type="text/javascript">
-     
-        function funcaoMudarbanner(id){      
-            let img = document.querySelector('.pointer1.active')
-            img.className = 'pointer1'   
-            let valor = document.getElementById('banner1')               
-            valor.className = 'pointer1'            
-           
-            document.getElementById(id).className = "pointer1 active" 
-            console.log(id)
-            verificar(id)
-        }          
-        
-        
-        function verificar(id){
-            if (id =="banner1"){                
-                var l =  document.getElementById('slidersid')
-                l.style.marginLeft= "0vw"
-            }
-            else if (id =="banner2"){                
-                var l =  document.getElementById('slidersid')
-                l.style.marginLeft = "-100vw"
-            }
-            else if (id =="banner3"){                
-                var l =  document.getElementById('slidersid')
-                l.style.marginLeft = "-200vw"
-            }
-            else if (id =="banner4"){                
-                var l =  document.getElementById('slidersid')
-            l.style.marginLeft = "-300vw"
-            }
-            else if (id =="banner5"){                
-                var l =  document.getElementById('slidersid')
-                l.style.marginLeft = "-400vw"
-            }
-/*
-            if (id =="imagem1"){                
-                var stl =  document.getElementById('sliders')
-                stl.style.marginLeft = "0vw"
-            }
-            else if (id =="imagem2"){                
-                var stl =  document.getElementById('sliders')
-                stl.style.marginLeft = "-100vw"
-            }
-            else if (id =="imagem3"){                
-                var stl =  document.getElementById('sliders')
-                stl.style.marginLeft = "-200vw"
-            }*/
+        function abrirmenu() {
+            let menu = document.getElementById("menu")
+            menu.style.display = menu.style.display == "" ? "block" : ""
         }
-    </script>
-    </section>
-
-    <a name = "servicos"></a>
-    <section class ="default dark" >
-        <div class="section-title" data-aos = "fade-up">Serviços</div>
-        <div class="section-desc" data-aos = "fade-up">Serviços e Horários de Funcionamento</div>
-        <div class="section-body">
-            <div class="section-services">
-                <div class="section-service" data-aos = "fade-righ">
-                    <img src="assets/images/medalha.png" alt="">
-                    <h4>Pontuação</h4>
-                    <p>Atendimento de otima pontuabilidade e simpatia</p>
-                </div>
-                <div class="section-service" data-aos = "fade-right">
-                    <img src="assets/images/estrela.png" alt="">
-                    <h4>Qualidade</h4>
-                    <p>Produtos de 1ª qualidade e sabor</p>
-                </div>
-                <div class="section-service"  data-aos = "fade-left">
-                    <img src="assets/images/relogio.png" alt="">
-                    <h4>Horario de Funcionamento</h4>
-                    <p>Segunda a Sexta(8hrs as 19:30hrs), Domingo e feriados(7:30hrs as 13:30hrs)</p>
-                </div>
-                <div class="section-service" data-aos = "fade-left">
-                    <img src="assets/images/balao.png" alt="">
-                    <h4>Encomendas</h4>
-                    <p>Realizamos a separação de pedidos via telefone</p>
-                </div>
-            </div>
-
-        </div>    
-    </section>
-
-    <a name = "produtos"></a>
-    <section class ="default light">
-        <div class="section-title" data-aos = "fade-up">Nosso produtos</div>
-        <div class="section-desc" data-aos = "fade-up">Com qualidades excelentes</div>
-        <div class="section-body">
-            <div class="section-projects">
-                <div class="section-projects--filters" data-aos = "fade-up">
-                    <ul>
-                        <li>Frutas</li>
-                        <li>Verduras</li>
-                        <li>Legumes</li>
-                        <li>Pacotes de 1 real</li>
-                        <li>Temperos</li>
-                    </ul>
-                </div>
-                <div class="section-projects--photos" data-aos = "fade-up">
-                    <div class="section-projects--photo">
-                        <div class="section-projects--photoarea">
-                            <div class="section-projects--photoinfo">
-                            <h5>Pera</h5>
-                            <p>todas a variedades disponíveis</p>
-                            </div>
-                            <img src="media/banca_melancia.png" alt="">                            
-                        </div>
-                    </div>
-                    <div class="section-projects--photo" data-aos = "fade-up">
-                        <div class="section-projects--photoarea">
-                            <div class="section-projects--photoinfo">
-                            <h5>Abacaxi</h5>
-                            <p>venha conferir nossas variedades</p>
-                            </div>
-                            <img src="media/abacaxi.png" alt="">
-                        </div>
-                    </div>
-                    <div class="section-projects--photo" data-aos = "fade-up">
-                        <div class="section-projects--photoarea">
-                            <div class="section-projects--photoinfo">
-                                <h5>Maçã</h5>
-                                <p>todas a variedades disponíveis</p>
-                            </div>
-                            <img src="media/maca_fuji.png" alt="">
-                        </div>
-                    </div>
-                    <div class="section-projects--photo" data-aos = "fade-up">
-                        <div class="section-projects--photoarea">
-                            <div class="section-projects--photoinfo">
-                                <h5>Bananas</h5>
-                            <p>todas a variedades disponíveis</p>
-                            </div>
-                            <img src="media/bananas.png" alt="">
-                        </div>
-                    </div>
-                    <div class="section-projects--photo" data-aos = "fade-up">
-                        <div class="section-projects--photoarea">
-                            <div class="section-projects--photoinfo">
-                                <h5>Uvas</h5>
-                            <p>todas a variedades disponíveis</p>
-                            </div>
-                            <img src="media/uvas.png" alt="">
-                        </div>
-                    </div>
-                    <div class="section-projects--photo" data-aos = "fade-up">
-                        <div class="section-projects--photoarea">
-                            <div class="section-projects--photoinfo">
-                                <h5>Legumes</h5>
-                            <p>todas a variedades disponíveis</p>
-                            </div>
-                            <img src="media/legumes.png" alt="">
-                        </div>
-                    </div>
-                    <div class="section-projects--photo" data-aos = "fade-up">
-                        <div class="section-projects--photoarea">
-                            <div class="section-projects--photoinfo">
-                                <h5>Bandeijas de frutas</h5>
-                            <p>venha conferir nossas variedades</p>
-                            </div>
-                            <img src="media/bandeijas.png" alt="">
-                        </div>
-                    </div>
-                    <div class="section-projects--photo" data-aos = "fade-up">
-                        <div class="section-projects--photoarea">
-                            <div class="section-projects--photoinfo">
-                                <h5>Verduras</h5>
-                            <p>todas a variedades disponíveis</p>
-                            </div>
-                            <img src="media/verduras.png" alt="">
-                        </div>
-                    </div>
-                    <div class="section-projects--photo" data-aos = "fade-up">
-                        <div class="section-projects--photoarea">
-                            <div class="section-projects--photoinfo">
-                                <h5>Temperos</h5>
-                            <p>venha conferir nossas variedades</p>
-                            </div>
-                            <img src="media/temperos.jpg" alt="">
-                        </div>
-                    </div>
-                    <div class="section-projects--photo" data-aos = "fade-up">
-                        <div class="section-projects--photoarea">
-                            <div class="section-projects--photoinfo">
-                                <h5>Tomate</h5>
-                            <p>venha conferir nossas variedades</p>
-                            </div>
-                            <img src="media/tomate.jpg" alt="">
-                        </div>
-                    </div>
-                    <div class="section-projects--photo" data-aos = "fade-up">
-                        <div class="section-projects--photoarea">
-                            <div class="section-projects--photoinfo">
-                                <h5>Caqui</h5>
-                            <p>venha conferir nossas variedades</p>
-                            </div>
-                            <img src="media/caqui.jpg" alt="">
-                        </div>
-                    </div>
-                    <div class="section-projects--photo" data-aos = "fade-up">
-                        <div class="section-projects--photoarea">
-                            <div class="section-projects--photoinfo">
-                                <h5>Pacote de 1 Real</h5>
-                            <p>venha conferir nossas variedades</p>
-                            </div>
-                            <img src="media/pacotes.png" alt="">
-                        </div>
-                    </div>
-                
-                    <a class = "button" href="https://www.instagram.com/sacolao_barreto.1/" target="_blank">Mais fotos</a>
-               
-                </div>
-            </div>
-            
-        </div>
-    </section>
-    <a name = "clientes"></a>
-    <section class ="default dark bg-team">
-        <div class="section-team-area">
-        <div class="section-title"  data-aos="fade-up">Clientes Satisfeitos</div>
-        <div class="section-desc" data-aos="fade-up">Algumas avaliações</div>
-        <div class="section-body">
-            <div class="section-team">
-                
-            </div>
-        </div>
-        </div>    
-    </section>
-
-    <section class="default light testimonials">     
-        <div class="section-body">
-            <div class="section-testimonials">
-                <div class="sliders" id = "sliders" style="margin-left:0vw;">    
-                              
-                    <div class="slide">                    
-                        <div class="slidearea" data-aos = "fade-left">
-                            <img class="section-testimonials--avatar" src="https://lh3.googleusercontent.com/a-/AOh14GiYkEIuBy-a-gQVfnDwT0m_ZzPYS4vuZcvrtTj8nw=w54-h54-p-rp-mo-br100" />
-                            <div class="section-testimonials--name">Betânia Franca</div>
-                            <div class="section-testimonials--role"></div>
-                            <img class="section-testimonials--quoteimg" src="assets/images/quote.png" />
-                            <div class="section-testimonials--quote">Sacolão Barreto o sacolão que atende e satisfaz nossas necessidades do dia a dia, frutas e verduras de excelente qualidade ! Atendimento excelente Satisfação em adquirir os produtos no Sacolão Barreto.</div>
-                        </div>
-                    </div><div class="slide">
-                        <div class="slidearea" data-aos = "fade-left">
-                            <img class="section-testimonials--avatar" src="https://lh3.googleusercontent.com/a-/AOh14Gg-fTCKm8yWqz3eA7UxJypko99rcYSYUdbkHyKzmsI=w60-h60-p-rp-mo-ba4-br100" />
-                            <div class="section-testimonials--name">Saritha Alves</div>
-                            <div class="section-testimonials--role"></div>
-                            <img class="section-testimonials--quoteimg" src="assets/images/quote.png" />
-                            <div class="section-testimonials--quote">Tudo bem fresquinho, as frutas sempre bem docinhas. Adoro comprar neste sacolão 👏.</div>
-                        </div>
-                    </div><div class="slide">
-                        <div class="slidearea" data-aos = "fade-left">
-                            <img class="section-testimonials--avatar" src="https://lh3.googleusercontent.com/a-/AOh14GjUh7c1bqL1k5v8JMkTzUASf_LsYXcu-TIzzQ4ImA=w60-h60-p-rp-mo-br100" />
-                            <div class="section-testimonials--name">Orlando Pereira</div>
-                            <div class="section-testimonials--role"></div>
-                            <img class="section-testimonials--quoteimg" src="assets/images/quote.png" />
-                            <div class="section-testimonials--quote">Sou sempre bem atendido, e tbm sempre encontro o que procuro!</div>
-                        </div>
-                    </div>
-                </div>                
-              
-                <form >
-                   
-                <div class="sliders-pointers">
-                    <div onclick="funçãoQueSeraExecutada(id)" class="pointer active" id="imagem1"></div>
-                    <div onclick="funçãoQueSeraExecutada(id)" class="pointer" id="imagem2"></div>
-                    <div onclick="funçãoQueSeraExecutada(id)" class="pointer" id="imagem3"></div>
-                  
-                </div>
-                 
-                
-            </form>
-            
-           
-            </div>            
-        </div>
-       
-    </section>
-    <script type="text/javascript">
-     
-        function funçãoQueSeraExecutada(id){      
-            var img = document.querySelector('.pointer.active')
-            img.className = 'pointer'   
-            var valor = document.getElementById('imagem1')               
-            valor.className = 'pointer'            
-            console.log(valor)
-            document.getElementById(id).className = "pointer active" 
-            verificarImagens(id)
-        }          
-        
-        
-        function verificarImagens(id){
-            if (id =="imagem1"){                
-                var stl =  document.getElementById('sliders')
-                stl.style.marginLeft = "0vw"
-            }
-            else if (id =="imagem2"){                
-                var stl =  document.getElementById('sliders')
-                stl.style.marginLeft = "-100vw"
-            }
-            else if (id =="imagem3"){                
-                var stl =  document.getElementById('sliders')
-                stl.style.marginLeft = "-200vw"
+        function hiddenmenu() {
+            let menu = document.getElementById("menu")
+            if (menu.style.display == "block") {
+                menu.style.display = "none"
             }
         }
     </script>
-    <section class="default light">
-    <div style ="width:100vw;
+    <main>
+        <section class="banner" id="banners" style="" onclick="hiddenmenu()">
+            <div class="sliders1" id="slidersid" style="margin-left:0vw;">
+                <div class="slide">
+                    <div class="slidearea">
+                        <h1 style="text-align: center;">Sacolão Barreto<br><span>Engenho novo</span></h1>
+                        <h2>Ligue para: (11) 4168-5529</h2><br>
+                        <a style="color:#FFF; text-decoration: none;"
+                            href="https://www.instagram.com/sacolao_barreto.1/">
+                            <h3>Insta: @sacolao_barreto.1</h3>
+                        </a>
+                        <a href="tel:41685529" class="button">Ligue agora</a>
+                    </div>
+                </div>
+                <div class="slide">
+                    <div class="slidearea">
+                        <h1 style="text-align: center;">Sacolão Barreto II<br><span>Parque dos Camargos</span></h1>
+                        <h2>Ligue para: (11) 973642167</h2><br>
+                        <a style="color:#FFF; text-decoration: none;" href="https://www.instagram.com/sacolaobarreto2/">
+                            <h3 style="color:#FFF;">Insta: @sacolaobarreto2</h3>
+                        </a>
+                        <a href="tel:11973642167" class="button">Ligue agora</a>
+                    </div>
+                </div>
+                <div class="slide">
+                    <div class="slidearea">
+                        <h1 style="text-align: center;">Sacolão Barreto III<br><span>Fazendinha</span></h1>
+                        <h2>Ligue para: (NUMERO)</h2>
+                        <a href="tel:114381-1691" class="button">Ligue agora</a>
+                    </div>
+                </div>
+                <div class="slide">
+                    <div class="slidearea">
+                        <h1 style="text-align: center;">Sacolão Barreto IV<br><span>Cruz preta</span></h1>
+                        <h2>Ligue para: (11) 4161-9826</h2>
+                        <br>
+                        <a style="color:#FFF; text-decoration: none;"
+                            href="https://www.instagram.com/sacolao_barreto.04/">
+                            <h3 style="color:#FFF;">Insta: @sacolao_barreto.04</h3>
+                        </a>
+                        <a href="tel:114161-9826" class="button">Ligue agora</a>
+                    </div>
+                </div>
+                <div class="slide">
+                    <div class="slidearea">
+                        <h1 style="text-align: center;">Sacolão Barreto V<br><span>Jardim Silveira, Barueri</span></h1>
+                        <h2>Ligue para: (11) 97507-4149</h2>
+                        <br>
+                        <a style="color:#FFF; text-decoration: none;" href="https://www.instagram.com/sacolaobarreto5/">
+                            <h3 style="color:#FFF;">Insta: @sacolaobarreto5</h3>
+                        </a>
+                        <a href="tel:11975074149" class="button">Ligue agora</a>
+
+                    </div>
+                </div>
+            </div>
+            <div class="sliders1-pointers">
+                <div onclick="funcaoMudarbanner(id)" id="banner1" class="pointer1 active"></div>
+                <div onclick="funcaoMudarbanner(id)" id="banner2" class="pointer1"></div>
+                <div onclick="funcaoMudarbanner(id)" id="banner3" class="pointer1"></div>
+                <div onclick="funcaoMudarbanner(id)" id="banner4" class="pointer1"></div>
+                <div onclick="funcaoMudarbanner(id)" id="banner5" class="pointer1"></div>
+            </div>
+        </section>
+
+        <a name="sobre"></a>
+        <section class="default light">
+            <div class="section-title" data-aos="fade-up">Sobre nós </div>
+            <div class="section-desc" data-aos="fade-up">Quem somos nós</div>
+            <div class="section-body" data-aos="fade-up">
+                <div class="section-aboutus">
+                    <div class="section-aboutus--left">
+                        A dor em si é o amor, o principal sistema de armazenamento.
+                        Agora as setas são ótimas da lição de casa dos clientes. Até que valha a pena como torturador
+                        imune à bebida.
+                        Até as flechas ou a probabilidade, os membros temem mas, a elite dos desenhos animados.
+                        E as crianças começam a ver como termina. Para quem é um desenho animado, um ativo com um
+                        diâmetro de proteína, um sistema imunológico.
+                        A doença das flechas da terra apenas Vestibulum tincidunt em sem ac elementum. Talvez isso seja
+                        uma maquiagem, mas triste.
+                        <a href="" class="button">Ler mais</a>
+
+
+                    </div>
+                    <div class="section-aboutus--right">
+                        <img src="assets/images/bg_team.jpg" alt="">
+                    </div>
+                </div>
+
+            </div>
+
+
+            <script type="text/javascript">
+
+                function funcaoMudarbanner(id) {
+                    let img = document.querySelector('.pointer1.active')
+                    img.className = 'pointer1'
+                    let valor = document.getElementById('banner1')
+                    valor.className = 'pointer1'
+                    console.log(id)
+
+                    document.getElementById(id).className = "pointer1 active"
+                    console.log(id)
+                    verificar(id)
+                }
+
+
+                function verificar(id) {
+                    if (id == "banner1") {
+                        var l = document.getElementById('slidersid')
+                        l.style.marginLeft = "0vw"
+                        let banner1 = document.getElementById('banners')
+                        banner1.style.backgroundImage = 'url(assets/images/bg.jpg)'
+                    }
+                    else if (id == "banner2") {
+                        var l = document.getElementById('slidersid')
+                        let banner2 = document.getElementById('banners')
+                        l.style.marginLeft = "-100vw"
+                        banner2.style.backgroundImage = 'url(assets/images/bg2.jpg)'
+                    }
+                    else if (id == "banner3") {
+                        var l = document.getElementById('slidersid')
+                        l.style.marginLeft = "-200vw"
+                        let banner3 = document.getElementById('banners')
+                        banner3.style.backgroundImage = 'url(assets/images/bg3.jpg)'
+                    }
+                    else if (id == "banner4") {
+                        var l = document.getElementById('slidersid')
+                        l.style.marginLeft = "-300vw"
+                        let banner4 = document.getElementById('banners')
+                        banner4.style.backgroundImage = 'url(assets/images/bg4.png)'
+                    }
+                    else if (id == "banner5") {
+                        var l = document.getElementById('slidersid')
+                        l.style.marginLeft = "-400vw"
+                        let banner5 = document.getElementById('banners')
+                        banner5.style.backgroundImage = 'url(assets/images/bg5.png)'
+                    }
+                    /*
+                                if (id =="imagem1"){                
+                                    var stl =  document.getElementById('sliders')
+                                    stl.style.marginLeft = "0vw"
+                                }
+                                else if (id =="imagem2"){                
+                                    var stl =  document.getElementById('sliders')
+                                    stl.style.marginLeft = "-100vw"
+                                }
+                                else if (id =="imagem3"){                
+                                    var stl =  document.getElementById('sliders')
+                                    stl.style.marginLeft = "-200vw"
+                                }*/
+                }
+            </script>
+        </section>
+
+        <a name="servicos"></a>
+        <section class="default dark">
+            <div class="section-title" data-aos="fade-up">Serviços</div>
+            <div class="section-desc" data-aos="fade-up">Serviços e Horários de Funcionamento</div>
+            <div class="section-body">
+                <div class="section-services">
+                    <div class="section-service" data-aos="fade-righ">
+                        <img src="assets/images/medalha.png" alt="">
+                        <h4>Pontuação</h4>
+                        <p>Atendimento de otima pontuabilidade e simpatia</p>
+                    </div>
+                    <div class="section-service" data-aos="fade-right">
+                        <img src="assets/images/estrela.png" alt="">
+                        <h4>Qualidade</h4>
+                        <p>Produtos de 1ª qualidade e sabor</p>
+                    </div>
+                    <div class="section-service" data-aos="fade-left">
+                        <img src="assets/images/relogio.png" alt="">
+                        <h4>Horario de Funcionamento</h4>
+                        <p>Segunda a Sexta(8hrs as 19:30hrs), Domingo e feriados(7:30hrs as 13:30hrs)</p>
+                    </div>
+                    <div class="section-service" data-aos="fade-left">
+                        <img src="assets/images/balao.png" alt="">
+                        <h4>Encomendas</h4>
+                        <p>Realizamos a separação de pedidos via telefone</p>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <a name="produtos"></a>
+        <section class="default light">
+            <div class="section-title" data-aos="fade-up">Nosso produtos</div>
+            <div class="section-desc" data-aos="fade-up">Com qualidades excelentes</div>
+            <div class="section-body">
+                <div class="section-projects">
+                    <div class="section-projects--filters" data-aos="fade-up">
+                        <ul>
+                            <li>Frutas</li>
+                            <li>Verduras</li>
+                            <li>Legumes</li>
+                            <li>Pacotes de 1 real</li>
+                            <li>Temperos</li>
+                        </ul>
+                    </div>
+                    <div class="section-projects--photos" data-aos="fade-up">
+                        <div class="section-projects--photo">
+                            <div class="section-projects--photoarea">
+                                <div class="section-projects--photoinfo">
+                                    <h5>Pera</h5>
+                                    <p>todas a variedades disponíveis</p>
+                                </div>
+                                <img src="media/banca_melancia.png" alt="">
+                            </div>
+                        </div>
+                        <div class="section-projects--photo" data-aos="fade-up">
+                            <div class="section-projects--photoarea">
+                                <div class="section-projects--photoinfo">
+                                    <h5>Abacaxi</h5>
+                                    <p>venha conferir nossas variedades</p>
+                                </div>
+                                <img src="media/abacaxi.png" alt="">
+                            </div>
+                        </div>
+                        <div class="section-projects--photo" data-aos="fade-up">
+                            <div class="section-projects--photoarea">
+                                <div class="section-projects--photoinfo">
+                                    <h5>Maçã</h5>
+                                    <p>todas a variedades disponíveis</p>
+                                </div>
+                                <img src="media/maca_fuji.png" alt="">
+                            </div>
+                        </div>
+                        <div class="section-projects--photo" data-aos="fade-up">
+                            <div class="section-projects--photoarea">
+                                <div class="section-projects--photoinfo">
+                                    <h5>Bananas</h5>
+                                    <p>todas a variedades disponíveis</p>
+                                </div>
+                                <img src="media/bananas.jpg" alt="">
+                            </div>
+                        </div>
+                        <div class="section-projects--photo" data-aos="fade-up">
+                            <div class="section-projects--photoarea">
+                                <div class="section-projects--photoinfo">
+                                    <h5>Uvas</h5>
+                                    <p>todas a variedades disponíveis</p>
+                                </div>
+                                <img src="media/uvas.png" alt="">
+                            </div>
+                        </div>
+                        <div class="section-projects--photo" data-aos="fade-up">
+                            <div class="section-projects--photoarea">
+                                <div class="section-projects--photoinfo">
+                                    <h5>Legumes</h5>
+                                    <p>todas a variedades disponíveis</p>
+                                </div>
+                                <img src="media/legumes.jpg" alt="">
+                            </div>
+                        </div>
+                        <div class="section-projects--photo" data-aos="fade-up">
+                            <div class="section-projects--photoarea">
+                                <div class="section-projects--photoinfo">
+                                    <h5>Bandeijas de frutas</h5>
+                                    <p>venha conferir nossas variedades</p>
+                                </div>
+                                <img src="media/bandeijas.png" alt="">
+                            </div>
+                        </div>
+                        <div class="section-projects--photo" data-aos="fade-up">
+                            <div class="section-projects--photoarea">
+                                <div class="section-projects--photoinfo">
+                                    <h5>Verduras</h5>
+                                    <p>todas a variedades disponíveis</p>
+                                </div>
+                                <img src="media/verduras.png" alt="">
+                            </div>
+                        </div>
+                        <div class="section-projects--photo" data-aos="fade-up">
+                            <div class="section-projects--photoarea">
+                                <div class="section-projects--photoinfo">
+                                    <h5>Temperos</h5>
+                                    <p>venha conferir nossas variedades</p>
+                                </div>
+                                <img src="media/temperos.jpg" alt="">
+                            </div>
+                        </div>
+                        <div class="section-projects--photo" data-aos="fade-up">
+                            <div class="section-projects--photoarea">
+                                <div class="section-projects--photoinfo">
+                                    <h5>Tomate</h5>
+                                    <p>venha conferir nossas variedades</p>
+                                </div>
+                                <img src="media/tomate.jpg" alt="">
+                            </div>
+                        </div>
+                        <div class="section-projects--photo" data-aos="fade-up">
+                            <div class="section-projects--photoarea">
+                                <div class="section-projects--photoinfo">
+                                    <h5>Caqui</h5>
+                                    <p>venha conferir nossas variedades</p>
+                                </div>
+                                <img src="media/caqui.jpg" alt="">
+                            </div>
+                        </div>
+                        <div class="section-projects--photo" data-aos="fade-up">
+                            <div class="section-projects--photoarea">
+                                <div class="section-projects--photoinfo">
+                                    <h5>Pacote de 1 Real</h5>
+                                    <p>venha conferir nossas variedades</p>
+                                </div>
+                                <img src="media/pacotes.png" alt="">
+                            </div>
+                        </div>
+
+                        <a class="button" href="https://www.instagram.com/sacolao_barreto.1/" target="_blank">Mais
+                            fotos</a>
+
+                    </div>
+                </div>
+
+            </div>
+        </section>
+        <a name="clientes"></a>
+        <section class="default dark bg-team">
+            <div class="section-team-area">
+                <div class="section-title" data-aos="fade-up">Clientes Satisfeitos</div>
+                <div class="section-desc" data-aos="fade-up">Algumas avaliações</div>
+                <div class="section-body">
+                    <div class="section-team">
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="default light testimonials">
+            <div class="section-body">
+                <div class="section-testimonials">
+                    <div class="sliders" id="sliders" style="margin-left:0vw;">
+
+                        <div class="slide">
+                            <div class="slidearea" data-aos="fade-left">
+                                <img class="section-testimonials--avatar"
+                                    src="https://lh3.googleusercontent.com/a-/AOh14GiYkEIuBy-a-gQVfnDwT0m_ZzPYS4vuZcvrtTj8nw=w54-h54-p-rp-mo-br100" />
+                                <div class="section-testimonials--name">Betânia Franca</div>
+                                <div class="section-testimonials--role"></div>
+                                <img class="section-testimonials--quoteimg" src="assets/images/quote.png" />
+                                <div class="section-testimonials--quote">Sacolão Barreto o sacolão que atende e satisfaz
+                                    nossas necessidades do dia a dia, frutas e verduras de excelente qualidade !
+                                    Atendimento excelente Satisfação em adquirir os produtos no Sacolão Barreto.</div>
+                            </div>
+                        </div>
+                        <div class="slide">
+                            <div class="slidearea" data-aos="fade-left">
+                                <img class="section-testimonials--avatar"
+                                    src="https://lh3.googleusercontent.com/a-/AOh14Gg-fTCKm8yWqz3eA7UxJypko99rcYSYUdbkHyKzmsI=w60-h60-p-rp-mo-ba4-br100" />
+                                <div class="section-testimonials--name">Saritha Alves</div>
+                                <div class="section-testimonials--role"></div>
+                                <img class="section-testimonials--quoteimg" src="assets/images/quote.png" />
+                                <div class="section-testimonials--quote">Tudo bem fresquinho, as frutas sempre bem
+                                    docinhas. Adoro comprar neste sacolão 👏.</div>
+                            </div>
+                        </div>
+                        <div class="slide">
+                            <div class="slidearea" data-aos="fade-left">
+                                <img class="section-testimonials--avatar"
+                                    src="https://lh3.googleusercontent.com/a-/AOh14GjUh7c1bqL1k5v8JMkTzUASf_LsYXcu-TIzzQ4ImA=w60-h60-p-rp-mo-br100" />
+                                <div class="section-testimonials--name">Orlando Pereira</div>
+                                <div class="section-testimonials--role"></div>
+                                <img class="section-testimonials--quoteimg" src="assets/images/quote.png" />
+                                <div class="section-testimonials--quote">Sou sempre bem atendido, e tbm sempre encontro
+                                    o que procuro!</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <form>
+
+                        <div class="sliders-pointers">
+                            <div onclick="funçãoQueSeraExecutada(id)" class="pointer active" id="imagem1"></div>
+                            <div onclick="funçãoQueSeraExecutada(id)" class="pointer" id="imagem2"></div>
+                            <div onclick="funçãoQueSeraExecutada(id)" class="pointer" id="imagem3"></div>
+
+                        </div>
+
+
+                    </form>
+
+
+                </div>
+            </div>
+
+        </section>
+        <script type="text/javascript">
+
+            function funçãoQueSeraExecutada(id) {
+                var img = document.querySelector('.pointer.active')
+                img.className = 'pointer'
+                var valor = document.getElementById('imagem1')
+                valor.className = 'pointer'
+                console.log(valor)
+                document.getElementById(id).className = "pointer active"
+                verificarImagens(id)
+            }
+
+
+            function verificarImagens(id) {
+                if (id == "imagem1") {
+                    var stl = document.getElementById('sliders')
+                    stl.style.marginLeft = "0vw"
+                }
+                else if (id == "imagem2") {
+                    var stl = document.getElementById('sliders')
+                    stl.style.marginLeft = "-100vw"
+                }
+                else if (id == "imagem3") {
+                    var stl = document.getElementById('sliders')
+                    stl.style.marginLeft = "-200vw"
+                }
+            }
+        </script>
+        <section class="default light">
+            <div style="width:100vw;
     margin-top:10px;
     display:flex;
     flex-wrap:wrap;
     align-items: center;
     justify-content:center;">
- <a class = "button" href="https://www.google.com/maps/place/Sacol%C3%A3o+Barreto/@-23.4885067,-46.8943945,17z/data=!4m7!3m6!1s0x94cf03b4b07abe77:0xac85106518d4e0b4!8m2!3d-23.4885099!4d-46.892208!9m1!1b1?hl=pt-BR" target="_blank">Mais comentários</a>
-       </div>   
-    </section>   
-    <a name = "localizacao"></a>
-    <section class="default light">
-       
-        <div class="section-title">Localizações</div>
-        <div class="section-desc">Nossos comércios ao seu redor</div>        
-    </section>
+                <a class="button"
+                    href="https://www.google.com/maps/place/Sacol%C3%A3o+Barreto/@-23.4885067,-46.8943945,17z/data=!4m7!3m6!1s0x94cf03b4b07abe77:0xac85106518d4e0b4!8m2!3d-23.4885099!4d-46.892208!9m1!1b1?hl=pt-BR"
+                    target="_blank">Mais comentários</a>
+            </div>
+        </section>
+        <a name="localizacao"></a>
+        <section class="default light">
 
-    <section class="section-map">
-        <div class="section-map--area"data-aos = "fade-down">
-            <div class="section-map--info">
-                    <div class="section-map--info-item" data-aos = "fade-left">
+            <div class="section-title">Localizações</div>
+            <div class="section-desc">Nossos comércios ao seu redor</div>
+        </section>
+
+        <section class="section-map">
+            <div class="section-map--area" data-aos="fade-down">
+                <div class="section-map--info">
+                    <div class="section-map--info-item" data-aos="fade-left">
                         <div class="section-map--info-item-img">
                             <img src="assets/images/localizacao.png" />
                         </div>
-                        <a class="button_map" href="https://www.google.com/maps/place/Sacol%C3%A3o+Barreto/@-23.4872127,-46.8934933,15z/data=!4m5!3m4!1s0x0:0xac85106518d4e0b4!8m2!3d-23.4885099!4d-46.892208">Sacolão barreto I</a>
+                        <a class="button_map"
+                            href="https://www.google.com/maps/place/Sacol%C3%A3o+Barreto/@-23.4872127,-46.8934933,15z/data=!4m5!3m4!1s0x0:0xac85106518d4e0b4!8m2!3d-23.4885099!4d-46.892208">Sacolão
+                            barreto I</a>
                     </div>
-                    <div class="section-map--info-item" data-aos = "fade-left">
+                    <div class="section-map--info-item" data-aos="fade-left">
                         <div class="section-map--info-item-img">
                             <img src="assets/images/localizacao.png" />
                         </div>
-                        <a class="button_map" href="https://www.google.com/maps/place/Sacolao+Barreto+Il/@-23.5400863,-46.8880173,17z/data=!3m1!4b1!4m5!3m4!1s0x94cf013f9deb6f5f:0xbfa4d30166f9d505!8m2!3d-23.5401181!4d-46.8858362">Sacolão barreto II</a>
+                        <a class="button_map"
+                            href="https://www.google.com/maps/place/Sacolao+Barreto+Il/@-23.5400863,-46.8880173,17z/data=!3m1!4b1!4m5!3m4!1s0x94cf013f9deb6f5f:0xbfa4d30166f9d505!8m2!3d-23.5401181!4d-46.8858362">Sacolão
+                            barreto II</a>
                     </div>
-                    <div class="section-map--info-item" data-aos = "fade-left">
+                    <div class="section-map--info-item" data-aos="fade-left">
                         <div class="section-map--info-item-img">
                             <img src="assets/images/localizacao.png" />
                         </div>
-                        <a  class="button_map"href="https://www.google.com/maps/place/Sacol%C3%A3o+Barreto+III/@-23.4088121,-46.8922794,17z/data=!3m1!4b1!4m5!3m4!1s0x94cf1c89b36e08f3:0xa7c332c160ac193e!8m2!3d-23.4088383!4d-46.8900951">Sacolão barreto III</a>
+                        <a class="button_map"
+                            href="https://www.google.com/maps/place/Sacol%C3%A3o+Barreto+III/@-23.4088121,-46.8922794,17z/data=!3m1!4b1!4m5!3m4!1s0x94cf1c89b36e08f3:0xa7c332c160ac193e!8m2!3d-23.4088383!4d-46.8900951">Sacolão
+                            barreto III</a>
                     </div>
-                    <div class="section-map--info-item" data-aos = "fade-left">
+                    <div class="section-map--info-item" data-aos="fade-left">
                         <div class="section-map--info-item-img">
                             <img src="assets/images/localizacao.png" />
                         </div>
-                        <a class="button_map" href="https://www.google.com/maps/place/Sacol%C3%A3o+Barreto+IV/@-23.4923718,-46.8829628,17z/data=!3m1!4b1!4m5!3m4!1s0x94cf03bc5692375f:0x5447f6f903fe1f37!8m2!3d-23.4923767!4d-46.8807741">Sacolão barreto IV</a>
+                        <a class="button_map"
+                            href="https://www.google.com/maps/place/Sacol%C3%A3o+Barreto+IV/@-23.4923718,-46.8829628,17z/data=!3m1!4b1!4m5!3m4!1s0x94cf03bc5692375f:0x5447f6f903fe1f37!8m2!3d-23.4923767!4d-46.8807741">Sacolão
+                            barreto IV</a>
                     </div>
-                    <div class="section-map--info-item" data-aos = "fade-left">
+                    <div class="section-map--info-item" data-aos="fade-left">
                         <div class="section-map--info-item-img">
                             <img src="assets/images/localizacao.png" />
                         </div>
-                        <a class="button_map" href="https://www.google.com/maps/place/Sacol%C3%A3o+Barreto+V/@-23.5318774,-46.8877582,17z/data=!3m1!4b1!4m5!3m4!1s0x94cf0142fed47f7f:0xc47b98b63f53de62!8m2!3d-23.5318545!4d-46.8855481">Sacolão barreto V</a>
+                        <a class="button_map"
+                            href="https://www.google.com/maps/place/Sacol%C3%A3o+Barreto+V/@-23.5318774,-46.8877582,17z/data=!3m1!4b1!4m5!3m4!1s0x94cf0142fed47f7f:0xc47b98b63f53de62!8m2!3d-23.5318545!4d-46.8855481">Sacolão
+                            barreto V</a>
                     </div>
+                </div>
+            </div>
+        </section>
+
+
+    </main>
+    <a name="contato"></a>
+    <footer>
+        <div class="footer--area">
+            <div class="footer--item area1">
+                <div class="footer-social">
+
+                    <a href="https://www.instagram.com/sacolao_barreto.1/" target="_blank"><img
+                            src="assets/images/instagram.png" style="border-radius:3px;"></a>
+                    <a href="https://www.facebook.com/Sacol%C3%A3o-Barreto-100369401658066/" target="_blank"><img
+                            src="assets/images/facebook.png" /></a>
+                    <a href="tel:1141613813"><img src="assets/images/telefone.png" /></a>
+                    <a href="#"><img src="assets/images/pinterest.png" /></a>
+
+                </div>
+            </div>
+            <div class="footer--item area3">
+                <div class="footer--item area2">
+
+                </div>
+            </div>
+            <div class="footer--item area3" data-aos="fade-up">
+                <form method="POST" style="border-radius: 10px;">
+                    <h1 style="font-style: 600;"> CONTATO <img src="assets/images/telefone.png" /> </h1>
+                    <p data-aos="fade-down">SACOLÃO BARRETO I: (11) 4168-5529</p><br>
+                    <p data-aos="fade-down">SACOLÃO BARRETO II: (11) 973642167</p><br>
+                    <p data-aos="fade-up">SACOLÃO BARRETO III: (11) 4381-1691</p><br>
+                    <p>SACOLÃO BARRETO IV: (11) 4161-9826</p><br>
+                    <p>SACOLÃO BARRETO V: (11) 97507-4149</p>
+                </form>
             </div>
         </div>
-    </section>
 
+    </footer>
 
-</main>
-<a name = "contato"></a>
-<footer>
-  <div class="footer--area">
-        <div class="footer--item area1">
-            <div class="footer-social">
-           
-                <a href="https://www.instagram.com/sacolao_barreto.1/" target="_blank"><img src="assets/images/instagram.png" style="border-radius:3px;"></a>
-                <a href="https://www.facebook.com/Sacol%C3%A3o-Barreto-100369401658066/" target="_blank"><img src="assets/images/facebook.png" /></a>
-                <a href="tel:1141613813"><img src="assets/images/telefone.png" /></a> 
-                <a href="#"><img src="assets/images/pinterest.png" /></a>
-            
-            </div>
-        </div>
-    <div class="footer--item area3">
-        <div class="footer--item area2">
-               
-        </div>
-    </div>
-       <div class="footer--item area3" data-aos = "fade-up">
-            <form method="POST" style = "border-radius: 10px;">
-                <h1 style="font-style: 600;"> CONTATO  <img src="assets/images/telefone.png" /> </h1>
-               <p data-aos = "fade-down">SACOLÃO BARRETO  I: (11) 4168-5529</p><br>
-               <p data-aos = "fade-down">SACOLÃO BARRETO II: (11) 973642167</p><br>
-               <p data-aos = "fade-up">SACOLÃO BARRETO III: (11) 4381-1691</p><br>
-               <p>SACOLÃO BARRETO IV: (11) 4161-9826</p><br>
-               <p >SACOLÃO BARRETO V: (11) 97507-4149</p>            
-            </form>
-        </div>
-    </div>  
-   
-</footer>
-
-<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-  <script>
-    AOS.init({
-        duration: 1500
-    });
-  </script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 1500
+        });
+    </script>
 </body>
+
 </html>
