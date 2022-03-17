@@ -38,6 +38,9 @@ header {
     display:flex;
     justify-content: flex-end;
 }
+html{
+    scroll-behavior: smooth;
+}
 .menu-opener {
     display:none;
 }
@@ -60,9 +63,11 @@ header {
     align-items:center;
     border-bottom:5px solid #000;
 }
+
 .menu li a:hover,
-.menu .active a {
+.menu ul li.active a {
     border-bottom:5px solid #B28756;
+    transition: 0.3s ease;
     color:#CCC;
 }
 
@@ -88,7 +93,7 @@ header {
 .banner {
     height:calc(115vh - 115px);
     background-color:#333;
-    background-image:url('../images/bg.jpg');
+    background-image:linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.7)), url('../images/bg.jpg');
     background-size:cover;
     background-position:center;
     overflow:hidden;
@@ -101,7 +106,9 @@ header {
     width:100vw;
     height:100%;
     display:inline-block;
-    background-color:rgba(0, 0, 0, 0.6);
+    background-size:cover;
+    background-position:center;
+    overflow:hidden;
 }
 .banner .slidearea {
     display:flex;
@@ -809,9 +816,6 @@ CSS DE ÁREAS ESPECÍFICAS
 
 
 
-
-
-
 @media (min-width:450px) and (max-width:800px) {
     .logo {
         margin-left:30px;
@@ -823,7 +827,7 @@ CSS DE ÁREAS ESPECÍFICAS
         cursor: pointer;
     }
     nav {
-        display:block;
+        display:none;
         position: absolute;
         z-index: 99;
         background-color: rgba(0, 0, 0, 0.9);

@@ -9,6 +9,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="assets/css/style.css" />
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
 </head>
 
 <body>
@@ -21,32 +22,22 @@
                 <img onclick="abrirmenu()" class="menu-opener" src="assets/images/menu.png" />
                 <nav id="menu">
                     <ul>
-                        <li class="active" onclick="hiddenmenu()"><a href="">Inicio</a></li>
-                        <li><a href="#sobre" onclick="hiddenmenu()">Sobre</a></li>
-                        <li><a href="#servicos" onclick="hiddenmenu()">Serviços</a></li>
-                        <li><a href="#produtos" onclick="hiddenmenu()">Nossos Produtos</a></li>
-                        <li><a href="#clientes" onclick="hiddenmenu()">Clientes Satisfeitos</a></li>
-                        <li><a href="#localizacao" onclick="hiddenmenu()">Localizações</a></li>
-                        <li><a href="#contato" onclick="hiddenmenu()">Nosso Contato</a></li>
+                        <li class="inicio active" onclick="hiddenmenu()"><a href="">Inicio</a></li>
+                        <li class="sobre"><a href="#sobre" onclick="hiddenmenu()">Sobre</a></li>
+                        <li class="servicos"><a href="#servicos" onclick="hiddenmenu()">Serviços</a></li>
+                        <li class="produtos"><a href="#produtos" onclick="hiddenmenu()">Nossos Produtos</a></li>
+                        <li class="clientes"><a href="#clientes" onclick="hiddenmenu()">Clientes Satisfeitos</a></li>
+                        <li class="localizacao"><a href="#localizacao" onclick="hiddenmenu()">Localizações</a></li>
+                        <li id="ctt" class="contato"><a href="#contato" onclick="hiddenmenu()">Nosso Contato</a></li>
                     </ul>
                 </nav>
             </div>
         </div>
     </header>
-    <script type="text/javascript">
-        function abrirmenu() {
-            let menu = document.getElementById("menu")
-            menu.style.display = menu.style.display == "" ? "block" : ""
-        }
-        function hiddenmenu() {
-            let menu = document.getElementById("menu")
-            if (menu.style.display == "block") {
-                menu.style.display = "none"
-            }
-        }
-    </script>
+
+   
     <main>
-        <section class="banner" id="banners" style="" onclick="hiddenmenu()">
+        <section class="banner" id="inicio" style="" onclick="hiddenmenu()">
             <div class="sliders1" id="slidersid" style="margin-left:0vw;">
                 <div class="slide">
                     <div class="slidearea">
@@ -98,6 +89,7 @@
                         </a>
                         <a href="tel:11975074149" class="button">Ligue agora</a>
 
+
                     </div>
                 </div>
             </div>
@@ -107,11 +99,12 @@
                 <div onclick="funcaoMudarbanner(id)" id="banner3" class="pointer1"></div>
                 <div onclick="funcaoMudarbanner(id)" id="banner4" class="pointer1"></div>
                 <div onclick="funcaoMudarbanner(id)" id="banner5" class="pointer1"></div>
+
             </div>
         </section>
 
-        <a name="sobre"></a>
-        <section class="default light">
+
+        <section id="sobre" class="default light">
             <div class="section-title" data-aos="fade-up">Sobre nós </div>
             <div class="section-desc" data-aos="fade-up">Quem somos nós</div>
             <div class="section-body" data-aos="fade-up">
@@ -134,74 +127,14 @@
                     </div>
                 </div>
 
+
             </div>
 
 
-            <script type="text/javascript">
-
-                function funcaoMudarbanner(id) {
-                    let img = document.querySelector('.pointer1.active')
-                    img.className = 'pointer1'
-                    let valor = document.getElementById('banner1')
-                    valor.className = 'pointer1'
-                    console.log(id)
-
-                    document.getElementById(id).className = "pointer1 active"
-                    console.log(id)
-                    verificar(id)
-                }
-
-
-                function verificar(id) {
-                    if (id == "banner1") {
-                        var l = document.getElementById('slidersid')
-                        l.style.marginLeft = "0vw"
-                        let banner1 = document.getElementById('banners')
-                        banner1.style.backgroundImage = 'url(assets/images/bg.jpg)'
-                    }
-                    else if (id == "banner2") {
-                        var l = document.getElementById('slidersid')
-                        let banner2 = document.getElementById('banners')
-                        l.style.marginLeft = "-100vw"
-                        banner2.style.backgroundImage = 'url(assets/images/bg2.jpg)'
-                    }
-                    else if (id == "banner3") {
-                        var l = document.getElementById('slidersid')
-                        l.style.marginLeft = "-200vw"
-                        let banner3 = document.getElementById('banners')
-                        banner3.style.backgroundImage = 'url(assets/images/bg3.jpg)'
-                    }
-                    else if (id == "banner4") {
-                        var l = document.getElementById('slidersid')
-                        l.style.marginLeft = "-300vw"
-                        let banner4 = document.getElementById('banners')
-                        banner4.style.backgroundImage = 'url(assets/images/bg4.png)'
-                    }
-                    else if (id == "banner5") {
-                        var l = document.getElementById('slidersid')
-                        l.style.marginLeft = "-400vw"
-                        let banner5 = document.getElementById('banners')
-                        banner5.style.backgroundImage = 'url(assets/images/bg5.png)'
-                    }
-                    /*
-                                if (id =="imagem1"){                
-                                    var stl =  document.getElementById('sliders')
-                                    stl.style.marginLeft = "0vw"
-                                }
-                                else if (id =="imagem2"){                
-                                    var stl =  document.getElementById('sliders')
-                                    stl.style.marginLeft = "-100vw"
-                                }
-                                else if (id =="imagem3"){                
-                                    var stl =  document.getElementById('sliders')
-                                    stl.style.marginLeft = "-200vw"
-                                }*/
-                }
-            </script>
         </section>
 
-        <a name="servicos"></a>
-        <section class="default dark">
+
+        <section id="servicos" class="default dark">
             <div class="section-title" data-aos="fade-up">Serviços</div>
             <div class="section-desc" data-aos="fade-up">Serviços e Horários de Funcionamento</div>
             <div class="section-body">
@@ -231,8 +164,8 @@
             </div>
         </section>
 
-        <a name="produtos"></a>
-        <section class="default light">
+
+        <section id="produtos" class="default light">
             <div class="section-title" data-aos="fade-up">Nosso produtos</div>
             <div class="section-desc" data-aos="fade-up">Com qualidades excelentes</div>
             <div class="section-body">
@@ -356,6 +289,7 @@
                             </div>
                         </div>
 
+
                         <a class="button" href="https://www.instagram.com/sacolao_barreto.1/" target="_blank">Mais
                             fotos</a>
 
@@ -364,7 +298,8 @@
 
             </div>
         </section>
-        <a name="clientes"></a>
+
+
         <section class="default dark bg-team">
             <div class="section-team-area">
                 <div class="section-title" data-aos="fade-up">Clientes Satisfeitos</div>
@@ -377,7 +312,7 @@
             </div>
         </section>
 
-        <section class="default light testimonials">
+        <section id="clientes" class="default light testimonials">
             <div class="section-body">
                 <div class="section-testimonials">
                     <div class="sliders" id="sliders" style="margin-left:0vw;">
@@ -394,6 +329,7 @@
                                     Atendimento excelente Satisfação em adquirir os produtos no Sacolão Barreto.</div>
                             </div>
                         </div>
+
                         <div class="slide">
                             <div class="slidearea" data-aos="fade-left">
                                 <img class="section-testimonials--avatar"
@@ -416,8 +352,8 @@
                                     o que procuro!</div>
                             </div>
                         </div>
-                    </div>
 
+                    </div>
                     <form>
 
                         <div class="sliders-pointers">
@@ -429,40 +365,14 @@
 
 
                     </form>
-
-
                 </div>
+
+            </div>
             </div>
 
         </section>
-        <script type="text/javascript">
-
-            function funçãoQueSeraExecutada(id) {
-                var img = document.querySelector('.pointer.active')
-                img.className = 'pointer'
-                var valor = document.getElementById('imagem1')
-                valor.className = 'pointer'
-                console.log(valor)
-                document.getElementById(id).className = "pointer active"
-                verificarImagens(id)
-            }
 
 
-            function verificarImagens(id) {
-                if (id == "imagem1") {
-                    var stl = document.getElementById('sliders')
-                    stl.style.marginLeft = "0vw"
-                }
-                else if (id == "imagem2") {
-                    var stl = document.getElementById('sliders')
-                    stl.style.marginLeft = "-100vw"
-                }
-                else if (id == "imagem3") {
-                    var stl = document.getElementById('sliders')
-                    stl.style.marginLeft = "-200vw"
-                }
-            }
-        </script>
         <section class="default light">
             <div style="width:100vw;
     margin-top:10px;
@@ -475,14 +385,14 @@
                     target="_blank">Mais comentários</a>
             </div>
         </section>
-        <a name="localizacao"></a>
+
         <section class="default light">
 
             <div class="section-title">Localizações</div>
             <div class="section-desc">Nossos comércios ao seu redor</div>
         </section>
 
-        <section class="section-map">
+        <section id="localizacao" class="section-map">
             <div class="section-map--area" data-aos="fade-down">
                 <div class="section-map--info">
                     <div class="section-map--info-item" data-aos="fade-left">
@@ -531,7 +441,9 @@
 
 
     </main>
-    <a name="contato"></a>
+    <section id="contato">
+    </section>
+
     <footer>
         <div class="footer--area">
             <div class="footer--item area1">
@@ -565,12 +477,12 @@
 
     </footer>
 
+
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-    <script>
-        AOS.init({
-            duration: 1500
-        });
-    </script>
+  
+    <script src="assets/js/home.js"></script>
+
 </body>
+
 
 </html>
